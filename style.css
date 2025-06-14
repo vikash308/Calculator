@@ -1,75 +1,74 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body{
+
+body {
     height: 100vh;
-    width: 100vw;
     display: flex;
-   justify-content: center;
-   align-items: center;
-    margin: 0;
-    background-color: antiquewhite;
-
-}
-.cont{
-    border: 2px solid black;
-    display:inline-block;
-    width: 25rem;
-    height: 37.5rem;
-}
-.screen{
-    width: 100%;
-    height: 8rem;
-    display: flex;
+    justify-content: center;
     align-items: center;
-    font-size: 3.3rem;
-    color: aliceblue;
-    border-bottom: 2px solid black;
-    background-color: rgb(30, 22, 22);
-    
+    background-color: linear-gradient(135deg, #2e2e2e, #121212);
+
 }
 
-.key{
-    height: 5rem;
-    width: 5rem;
-    background-color: rgb(244, 139, 2);
-    border-radius: 50%;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 700;
-    margin: 7px;
-    color: black;
+.cont {
+   background-color: #1f1f1f;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  overflow: hidden;
+  width: 340px;
+  max-width: 90vw;
+}
+
+.screen {
+    background-color: #222;
+    width: 100%;
+    min-height: 80px;
+    word-wrap: break-word;
+    padding: 20px;
+    font-size: 2.5rem;
+    text-align: right;
+    color: #fff;
+    border-bottom: 2px solid #333;
+
+
+}
+
+.key {
+    padding: 20px;
+    background-color: #444;
+    font-size: 1.4rem;
+    color: #f1f1f1;
     cursor: pointer;
     border: 3px solid black;
-   box-shadow:4px 4px 10px rgb(250, 3, 3);
-}
-.key:active{
-    transform: scale(0.92);
-    background-color: rgb(11, 11, 10);
-    border: 4px solid white;
-    color: aliceblue;
-}
-#button{
-    background-color: rgb(9, 7, 10);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    transition: background 0.2s ease;
 }
 
-@media only screen and (max-width: 400px ) {
-    .cont{
-        width: 100%;
-        height: 99%;
+.key:hover {
+  background-color: #555;
+}
+.key:active {
+    background-color: #666;
+}
+
+#button {
+    background-color: #333;
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(4,1fr);
+}
+
+@media only screen and (max-width: 400px) {
+
+    .key {
+        padding: 15px;
+        font-size: 1.2rem;
     }
-    .key{
-        height: 4rem;
-        width: 4rem;
-    }
-    .screen{
-        height: 20vh;
-    }
-    #button{
-        height: 78vh;
+
+    .screen {
+        font-size: 2rem;
     }
 }
